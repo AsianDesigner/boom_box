@@ -1,3 +1,104 @@
 .hidden {
     display: none;
 }
+
+@font-face {
+    font-family: 'ThrowupColor-Yellow';
+    src: url('../assets/ThrowupColor-Yellow.otf') format('opentype')
+}
+
+#headLine {
+	font-family: 'ThrowupColor-Yellow', 'Luckiest Guy', sans-serif;
+	text-align: center;
+	font-size: 40px;
+}
+
+body {
+	margin: 0px;
+	border: 0px;
+	background-image:url(../images/background.jpg);
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+	color:#FFF;
+	font-family: 'ThrowupColor-Yellow', 'Luckiest Guy', sans-serif;
+	font-size:16px;
+}
+
+.album-container {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+
+.album-cover {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.album-container .vinyl-disc {
+	display: hidden;
+	width: 90%;
+	padding: 8px;
+	cursor: pointer;
+}
+
+.album1 {
+    background-image: url('../images/album_cover1.jpg');
+}
+.album2 {
+    background-image: url('../images/album_cover2.jpg');
+}
+.album3 {
+    background-image: url('../images/album_cover3.jpg');
+}
+.album4 {
+    background-image: url('../images/album_cover4.jpg');
+}
+
+.record-players-container {
+    margin: 0 auto;
+    margin-top: -250px;
+    display: flex;
+    justify-content: center;
+}
+
+.record-players {
+	position: relative;
+	margin-top: 300px;
+    height: 175px;
+    border: medium solid white;
+    background-color: #252926;
+    color: inherit;
+    overflow: hidden;
+    display: flex;
+	width:1050px; 
+	text-align: center;
+}
+
+.player {
+	background-image:url(../images/record_player.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+	margin-right: 10px;
+	position: relative;
+}
+
+.player img {
+	padding: 0;
+	position: absolute;
+	width: 90%;
+}
+
+.p1 img { width:55%; right:74px; top:18px; }
+.p2 img { width:55%; right:74px; top:18px; }
+.p3 img { width:55%; right:74px; top:18px; }
+.p4 img { width:55%; right:74px; top:18px; }
