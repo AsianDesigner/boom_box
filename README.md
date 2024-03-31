@@ -12,3 +12,7 @@ play music once records are dragged onto the player. The vinyl will also
 spin when playing and stop when paused. An extra technical undertaking which I
 haven't planned for yet, and could ultimately prove too ambitious, is slotting 
 the records in and out the album sleeves and having them peek out when hovered on.
+
+The reset button doesn't work and I kept thinking of this
+spongebob meme
+![alt text](image.png)
