@@ -11,6 +11,17 @@ vinylDiscs.forEach(disc => {
     initialParents.push(disc.parentNode);
 });
 
+function resetPlayer() {
+    theAudioEl.pause();
+    theAudioEl.loop = false;
+    theAudioEl.currentTime = 0;
+
+    vinylDiscs.forEach((disc, index) => {
+        initialParents[index].appendChild(disc);
+    });
+    console.log('lets kill this beat');
+}
+
 function loadAudio() {
     let newSrc = `audio/${this.dataset.trackref}.mp3`;
     theAudioEl.src = newSrc;
@@ -18,13 +29,8 @@ function loadAudio() {
 }
 
 function playAudio(audio) {
-    audio.play();
-    audio.loop = true;
-}
-
-function stopAudio(audio) {
-    audio.pause();
-    audio.currentTime = 0;
+        audio.play();
+        audio.loop = true;
 }
 
 function handleStartDrag() { 
@@ -57,19 +63,14 @@ function handleDrop(e) {
 
         playAudio(audio);
     } else {
-        console.error('Data-trackref attribute not found on the disc.');
+    console.error('Data-trackref attribute not found on the disc.');
     }
 }
 
-function resetPlayer() {
-    stopAudio(theAudioEl);
-
-    vinylDiscs.forEach((disc, index) => {
-        initialParents[index].appendChild(disc);
-    });
-}
-
-resetBut.addEventListener("click", resetPlayer);
+resetBut.addEventListener("click", function() {
+    resetPlayer();
+    theAudioEl.loop = false;
+});
 
 vinylDiscs.forEach(disc => disc.addEventListener("dragstart", handleStartDrag));
 
